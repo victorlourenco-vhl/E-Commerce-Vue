@@ -6,7 +6,7 @@
         <label for="nameCategory">Nome</label>
         <input
           type="text"
-          class="form-control"
+          class="form-control" 
           id="nameCategory"
           placeholder=""
           v-model="categoryName"
@@ -62,31 +62,27 @@ export default {
       }
 
       api({
-        method: "post",
-        url: "/category",
+        method: 'post',
+        url: '/category',
         data: JSON.stringify(newCategory),
         headers: {
-            "Content-Type": "application/json"
+          'Content-Type': 'application/json'
         }
       })
-      .then(() => {
-        sweetalert({
+        .then(() => {
+          sweetalert({
             text: 'Categoria cadastrada com sucesso!',
             icon: 'success'
+          })
         })
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-    //   const reponse = api({
-    //     method: "get",
-    //     url: "/r-api/?api=filmes"
-    //   })
-    //   console.log(reponse)
+        .catch((err) => {
+          console.log(err)
+        })
     }
   }
 }
 </script>
+
 <style scoped>
 h2 {
   font-size: 2em;
