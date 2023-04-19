@@ -1,10 +1,16 @@
 <template>
   <div id="nav">
-    <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
+    
+    <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #e3f2fd;">
+      <a class="navbar-brand" href="#">Navbar</a> 
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <router-link to="/"><a class="nav-item nav-link" href="#">Home</a></router-link>
+          <router-link to="/category/add"><a class="nav-item nav-link" href="#">Adicionar Categoria</a></router-link>     
+        </div>
+      </div>
     </nav>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
